@@ -1,6 +1,8 @@
 # PreloadPageView
 
-Like the name, this is the widget to support Pre-load function for PageView widget
+Like the name, this is the widget to support Pre-load function for PageView widget.
+
+Currently it's only support preload one page, will enhance it latter if people need preload multiple pages.
 
 ## Usage
 
