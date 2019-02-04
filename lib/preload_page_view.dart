@@ -3,7 +3,7 @@ library preload_page_view;
 import 'dart:async';
 import 'dart:math' as math;
 
-import 'package:flutter/gestures.dart' show DragStartBehavior;
+import 'package:flutter/gestures.dart';
 import 'package:flutter/physics.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
@@ -394,7 +394,7 @@ class PreloadPageView extends StatefulWidget {
     this.pageSnapping = true,
     this.onPageChanged,
     List<Widget> children = const <Widget>[],
-    this.dragStartBehavior = DragStartBehavior.down,
+    this.dragStartBehavior,
   })  : controller = controller ?? _defaultPageController,
         childrenDelegate = SliverChildListDelegate(children),
         super(key: key);
@@ -421,7 +421,7 @@ class PreloadPageView extends StatefulWidget {
     this.onPageChanged,
     @required IndexedWidgetBuilder itemBuilder,
     int itemCount,
-    this.dragStartBehavior = DragStartBehavior.down,
+    this.dragStartBehavior,
   })  : controller = controller ?? _defaultPageController,
         childrenDelegate = SliverChildBuilderDelegate(itemBuilder, childCount: itemCount),
         super(key: key);
@@ -437,7 +437,7 @@ class PreloadPageView extends StatefulWidget {
     this.pageSnapping = true,
     this.onPageChanged,
     @required this.childrenDelegate,
-    this.dragStartBehavior = DragStartBehavior.down,
+    this.dragStartBehavior,
   })  : assert(childrenDelegate != null),
         controller = controller ?? _defaultPageController,
         super(key: key);
