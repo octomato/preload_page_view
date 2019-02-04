@@ -9,6 +9,12 @@
       <excludeFolder url="file://$MODULE_DIR$/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
+      <excludeFolder url="file://$MODULE_DIR$/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/example/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/example/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/example/example/build" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 25 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

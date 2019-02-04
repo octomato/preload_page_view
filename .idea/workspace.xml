@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12731bac-4ee3-447c-93c1-dca98c5d3a02" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/preload_page_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/preload_page_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preload_page_view.iml" beforeDir="false" afterPath="$PROJECT_DIR$/preload_page_view.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
@@ -28,7 +31,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="dart" value="4" />
+          <entry key="dart" value="8" />
           <entry key="lock" value="2" />
           <entry key="md" value="5" />
           <entry key="yaml" value="1" />
@@ -36,7 +39,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Dart" value="4" />
+          <entry key="Dart" value="8" />
           <entry key="Markdown" value="5" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="YAML" value="1" />
@@ -44,27 +47,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dart" value="46" />
-          <entry key="md" value="578" />
-          <entry key="yaml" value="283" />
+          <entry key="dart" value="99" />
+          <entry key="md" value="579" />
+          <entry key="yaml" value="284" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Dart" value="46" />
-          <entry key="Markdown" value="578" />
-          <entry key="YAML" value="283" />
+          <entry key="Dart" value="99" />
+          <entry key="Markdown" value="579" />
+          <entry key="YAML" value="284" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/preload_page_view.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+            <state relative-caret-position="2728">
+              <caret line="310" column="45" selection-start-line="310" selection-start-column="37" selection-end-line="310" selection-end-column="45" />
               <folding>
                 <element signature="e#28#48#0" expanded="true" />
               </folding>
@@ -73,12 +76,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../NeilLab/flutter/packages/flutter/lib/physics.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#661#0" expanded="true" />
+                <element signature="e#369#414#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../NeilLab/flutter/packages/flutter/lib/src/widgets/scrollable.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="202" column="26" selection-start-line="202" selection-start-column="26" selection-end-line="202" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NeilLab/flutter/packages/flutter/lib/gestures.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="495">
+              <caret line="27" column="31" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="31" />
               <folding>
                 <element signature="e#0#1137#0" expanded="true" />
-                <element signature="e#278#311#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,7 +114,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="209">
-                <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+                <caret line="11" selection-start-line="11" selection-end-line="11" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -103,7 +128,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="190">
-                <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+                <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -113,37 +138,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pubspec.lock">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NeilLab/flutter/packages/flutter/lib/src/gestures/recognizer.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="342">
               <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pubspec.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="230" lean-forward="true" selection-start-line="1" selection-start-column="230" selection-end-line="1" selection-end-column="230" />
+            <state relative-caret-position="175">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/preload_page_view_test.dart">
+        <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="40" lean-forward="true" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+            <state relative-caret-position="378">
+              <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -154,9 +170,17 @@
     <findStrings>
       <find>cache</find>
       <find>dragStartBehavior =</find>
-      <find>DragStartBehavior</find>
       <find>package:flutter/gestures.dart</find>
+      <find>DragStartBehavior</find>
+      <find>dragstartbehavior</find>
+      <find>preloaddrag</find>
+      <find>recognizer</find>
+      <find>initState</find>
+      <find>pageview</find>
     </findStrings>
+    <replaceStrings>
+      <replace>PreloadDragStartBehavior</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -166,13 +190,15 @@
       <list>
         <option value="$PROJECT_DIR$/test/preload_page_view_test.dart" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/CHANGELOG.md" />
         <option value="$PROJECT_DIR$/lib/preload_page_view.dart" />
+        <option value="$PROJECT_DIR$/CHANGELOG.md" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
+        <option value="$PROJECT_DIR$/example/test/widget_test.dart" />
+        <option value="$PROJECT_DIR$/example/lib/main.dart" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
@@ -194,11 +220,18 @@
             <path>
               <item name="preload_page_view" type="b2602c69:ProjectViewProjectNode" />
               <item name="preload_page_view" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="preload_page_view" type="b2602c69:ProjectViewProjectNode" />
+              <item name="preload_page_view" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="preload_page_view" type="b2602c69:ProjectViewProjectNode" />
               <item name="preload_page_view" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -214,6 +247,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Markdown" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -241,16 +279,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17238913" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17238913" />
       <window_info id="Structure" order="1" side_tool="true" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Dart Analysis" order="0" visible="true" weight="0.20472442" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32939634" />
+      <window_info anchor="bottom" id="Dart Analysis" order="0" weight="0.20472442" />
       <window_info anchor="bottom" id="Run" order="1" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" />
@@ -293,46 +332,49 @@
     <entry file="file://$PROJECT_DIR$/test/preload_page_view_test.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
-          <caret line="3" column="40" lean-forward="true" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+          <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../NeilLab/flutter/packages/flutter/lib/gestures.dart">
+    <entry file="file://$PROJECT_DIR$/pubspec.lock">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#1137#0" expanded="true" />
-            <element signature="e#278#311#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/preload_page_view.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-          <folding>
-            <element signature="e#28#48#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="266">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../NeilLab/flutter/packages/flutter/lib/src/gestures/recognizer.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="342">
           <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="209">
-            <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
+    <entry file="file://$PROJECT_DIR$/../../NeilLab/flutter/packages/flutter/lib/physics.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#661#0" expanded="true" />
+            <element signature="e#369#414#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NeilLab/flutter/packages/flutter/lib/src/widgets/scrollable.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="202" column="26" selection-start-line="202" selection-start-column="26" selection-end-line="202" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NeilLab/flutter/packages/flutter/lib/gestures.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="27" column="31" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#1137#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -340,7 +382,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="190">
-            <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+            <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
@@ -348,17 +390,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pubspec.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+    <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="209">
+            <caret line="11" selection-start-line="11" selection-end-line="11" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pubspec.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="230" lean-forward="true" selection-start-line="1" selection-start-column="230" selection-end-line="1" selection-end-column="230" />
+        <state relative-caret-position="175">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/test/widget_test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="74" lean-forward="true" selection-start-line="3" selection-start-column="74" selection-end-line="3" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/preload_page_view.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2728">
+          <caret line="310" column="45" selection-start-line="310" selection-start-column="37" selection-end-line="310" selection-end-column="45" />
+          <folding>
+            <element signature="e#28#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
