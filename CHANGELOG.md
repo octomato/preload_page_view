@@ -9,3 +9,7 @@
 ## [0.1.1]
 
 * Fix health issue
+
+## [0.1.2]
+
+* Add an example to library
