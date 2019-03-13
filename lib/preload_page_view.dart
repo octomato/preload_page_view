@@ -394,6 +394,7 @@ class PreloadPageView extends StatefulWidget {
     this.pageSnapping = true,
     this.onPageChanged,
     List<Widget> children = const <Widget>[],
+    this.preloadPagesCount,
   })  : controller = controller ?? _defaultPageController,
         childrenDelegate = SliverChildListDelegate(children),
         super(key: key);
@@ -410,6 +411,8 @@ class PreloadPageView extends StatefulWidget {
   ///
   /// [itemBuilder] will be called only with indices greater than or equal to
   /// zero and less than [itemCount].
+  ///
+  /// You can add [preloadPagesCount] for PreloadPageView if you want preload multiple pages
   PreloadPageView.builder({
     Key key,
     this.scrollDirection = Axis.horizontal,
@@ -420,6 +423,7 @@ class PreloadPageView extends StatefulWidget {
     this.onPageChanged,
     @required IndexedWidgetBuilder itemBuilder,
     int itemCount,
+    this.preloadPagesCount,
   })  : controller = controller ?? _defaultPageController,
         childrenDelegate = SliverChildBuilderDelegate(itemBuilder, childCount: itemCount),
         super(key: key);
@@ -435,6 +439,7 @@ class PreloadPageView extends StatefulWidget {
     this.pageSnapping = true,
     this.onPageChanged,
     @required this.childrenDelegate,
+    this.preloadPagesCount,
   })  : assert(childrenDelegate != null),
         controller = controller ?? _defaultPageController,
         super(key: key);
@@ -487,12 +492,22 @@ class PreloadPageView extends StatefulWidget {
   /// respectively.
   final SliverChildDelegate childrenDelegate;
 
+  /// A int number for preload multiple pages
+  ///
+  /// [preloadPagesCount] value start from 1
+  final int preloadPagesCount;
+
   @override
-  _PreloadPageViewState createState() => _PreloadPageViewState();
+  _PreloadPageViewState createState() => _PreloadPageViewState(preloadPagesCount);
 }
 
 class _PreloadPageViewState extends State<PreloadPageView> {
   int _lastReportedPage = 0;
+  int _preloadPagesCount = 1;
+
+  _PreloadPageViewState(int preloadPagesCount) {
+    this._preloadPagesCount = preloadPagesCount;
+  }
 
   @override
   void initState() {
@@ -536,7 +551,11 @@ class _PreloadPageViewState extends State<PreloadPageView> {
         physics: physics,
         viewportBuilder: (BuildContext context, ViewportOffset position) {
           return Viewport(
-            cacheExtent: 1,
+            cacheExtent: _preloadPagesCount <= 1
+                ? 1
+                : (widget.scrollDirection == Axis.horizontal
+                    ? MediaQuery.of(context).size.width * _preloadPagesCount - 1
+                    : MediaQuery.of(context).size.height * _preloadPagesCount - 1),
             axisDirection: axisDirection,
             offset: position,
             slivers: <Widget>[
