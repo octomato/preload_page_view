@@ -20,6 +20,7 @@ Everything is similar like PageView, you need `PreloadPageView.builder` and `Pre
       itemBuilder: ...,
       onPageChanged: (int position) {...},
       .....
+      preloadPagesCount: 3,
       controller: PreloadPageController(),
     );
   }

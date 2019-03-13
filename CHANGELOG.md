@@ -13,3 +13,7 @@
 ## [0.1.2]
 
 * Add an example to library
+
+## [0.1.3]
+
+* Add preloadPagesCount for preload multiple pages
