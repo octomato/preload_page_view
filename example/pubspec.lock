@@ -77,10 +77,12 @@ packages:
   preload_page_view:
     dependency: "direct main"
     description:
-      name: preload_page_view
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.1.1"
+      path: "."
+      ref: HEAD
+      resolved-ref: "3042a9efbc1a7dbaf5450f30c9b73430e2e391a6"
+      url: "https://github.com/wrbl606/preload_page_view.git"
+    source: git
+    version: "0.1.3"
   quiver:
     dependency: transitive
     description:
