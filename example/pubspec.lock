@@ -77,11 +77,9 @@ packages:
   preload_page_view:
     dependency: "direct main"
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: "3042a9efbc1a7dbaf5450f30c9b73430e2e391a6"
-      url: "https://github.com/wrbl606/preload_page_view.git"
-    source: git
+      path: ".."
+      relative: true
+    source: path
     version: "0.1.3"
   quiver:
     dependency: transitive
