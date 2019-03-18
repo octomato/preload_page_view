@@ -542,7 +542,7 @@ class _PreloadPageViewState extends State<PreloadPageView> {
     }
 
     if (preloadPagesCount < 0) {
-      throw 'preloadPagesCount cannot be less than 0. Actual value: $_preloadPagesCount';
+      throw 'preloadPagesCount cannot be less than 0. Actual value: $preloadPagesCount';
     }
   }
 
