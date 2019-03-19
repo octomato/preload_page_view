@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:preload_page_view/preload_page_view.dart';
+import 'package:example/page.dart';
 
 void main() {
   runApp(MyApp());
@@ -30,14 +31,15 @@ class _PreloadPageViewState extends State<PreloadPageViewDemo> {
         appBar: AppBar(
           title: const Text("PreloadPageView Demo"),
         ),
-        body: Center(
+        body: Container(
             child: PreloadPageView.builder(
-          itemCount: 3,
-          itemBuilder: (BuildContext context, int position) {
-            new Text("item" + position.toString());
-          },
+          preloadPagesCount: 5,
+          itemBuilder: (BuildContext context, int position) =>
+              DemoPage(position),
           controller: PreloadPageController(initialPage: 1),
-          onPageChanged: (int position) {},
+          onPageChanged: (int position) {
+            print('page changed. current: $position');
+          },
         )));
   }
 }
