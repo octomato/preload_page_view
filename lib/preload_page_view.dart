@@ -206,8 +206,7 @@ class PageMetrics extends FixedScrollMetrics {
   final double viewportFraction;
 }
 
-class _PagePosition extends ScrollPositionWithSingleContext
-    implements PageMetrics {
+class _PagePosition extends ScrollPositionWithSingleContext implements PageMetrics {
   _PagePosition({
     ScrollPhysics physics,
     ScrollContext context,
@@ -216,18 +215,18 @@ class _PagePosition extends ScrollPositionWithSingleContext
     double viewportFraction = 1.0,
     ScrollPosition oldPosition,
   })  : assert(initialPage != null),
-        assert(keepPage != null),
-        assert(viewportFraction != null),
-        assert(viewportFraction > 0.0),
-        _viewportFraction = viewportFraction,
-        _pageToUseOnStartup = initialPage.toDouble(),
-        super(
-          physics: physics,
-          context: context,
-          initialPixels: null,
-          keepScrollOffset: keepPage,
-          oldPosition: oldPosition,
-        );
+      assert(keepPage != null),
+      assert(viewportFraction != null),
+      assert(viewportFraction > 0.0),
+      _viewportFraction = viewportFraction,
+      _pageToUseOnStartup = initialPage.toDouble(),
+      super(
+      physics: physics,
+      context: context,
+      initialPixels: null,
+      keepScrollOffset: keepPage,
+      oldPosition: oldPosition,
+    );
 
   final int initialPage;
   double _pageToUseOnStartup;
@@ -244,43 +243,41 @@ class _PagePosition extends ScrollPositionWithSingleContext
   }
 
   double getPageFromPixels(double pixels, double viewportDimension) {
-    return math.max(0.0, pixels) /
-        math.max(1.0, viewportDimension * viewportFraction);
+    return math.max(0.0, pixels) / math.max(1.0, viewportDimension * viewportFraction);
   }
 
   double getPixelsFromPage(double page) {
-    return page * viewportDimension * viewportFraction;
+    return page * ((hasViewportDimension == true) ? viewportDimension : 0) * viewportFraction;
   }
 
   @override
-  double get page => pixels == null
-      ? null
-      : getPageFromPixels(
-          pixels.clamp(minScrollExtent, maxScrollExtent), viewportDimension);
+  double get page => (hasPixels == false)
+    ? null
+    : getPageFromPixels(
+    pixels.clamp((hasContentDimensions == true) ? minScrollExtent : null, (hasContentDimensions == true) ? maxScrollExtent : null),
+    (hasViewportDimension == true) ? viewportDimension : null,
+  );
 
   @override
   void saveScrollOffset() {
-    PageStorage.of(context.storageContext)?.writeState(
-        context.storageContext, getPageFromPixels(pixels, viewportDimension));
+    PageStorage.of(context.storageContext)
+      ?.writeState(context.storageContext, getPageFromPixels((hasPixels) ? pixels : null, (hasViewportDimension) ? viewportDimension : null));
   }
 
   @override
   void restoreScrollOffset() {
-    if (pixels == null) {
-      final double value = PageStorage.of(context.storageContext)
-          ?.readState(context.storageContext);
+    if (hasPixels == true) {
+      final double value = PageStorage.of(context.storageContext)?.readState(context.storageContext);
       if (value != null) _pageToUseOnStartup = value;
     }
   }
 
   @override
   bool applyViewportDimension(double viewportDimension) {
-    final double oldViewportDimensions = this.viewportDimension;
+    final double oldViewportDimensions = (hasViewportDimension) ? this.viewportDimension : null;
     final bool result = super.applyViewportDimension(viewportDimension);
-    final double oldPixels = pixels;
-    final double page = (oldPixels == null || oldViewportDimensions == 0.0)
-        ? _pageToUseOnStartup
-        : getPageFromPixels(oldPixels, oldViewportDimensions);
+    final double oldPixels = (hasPixels) ? pixels : null;
+    final double page = (oldPixels == null || oldViewportDimensions == 0.0) ? _pageToUseOnStartup : getPageFromPixels(oldPixels, oldViewportDimensions);
     final double newPixels = getPixelsFromPage(page);
     if (newPixels != oldPixels) {
       correctPixels(newPixels);
@@ -299,10 +296,10 @@ class _PagePosition extends ScrollPositionWithSingleContext
     double viewportFraction,
   }) {
     return PageMetrics(
-      minScrollExtent: minScrollExtent ?? this.minScrollExtent,
-      maxScrollExtent: maxScrollExtent ?? this.maxScrollExtent,
-      pixels: pixels ?? this.pixels,
-      viewportDimension: viewportDimension ?? this.viewportDimension,
+      minScrollExtent: minScrollExtent ?? ((hasContentDimensions) ? this.minScrollExtent : null),
+      maxScrollExtent: maxScrollExtent ?? ((hasContentDimensions) ? this.maxScrollExtent : null),
+      pixels: pixels ?? ((hasPixels) ? this.pixels : null),
+      viewportDimension: viewportDimension ?? ((hasViewportDimension) ? this.viewportDimension : null),
       axisDirection: axisDirection ?? this.axisDirection,
       viewportFraction: viewportFraction ?? this.viewportFraction,
     );
