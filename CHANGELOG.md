@@ -13,3 +13,7 @@
 ## [0.1.4]
 
 * Bug fix
+
+## [0.1.5]
+
+* Fix null check operators
