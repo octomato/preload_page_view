@@ -11,7 +11,7 @@ class DemoPage extends StatelessWidget {
     return Center(
       child: Text(
         'Page $index',
-        style: Theme.of(context).textTheme.display1,
+        style: Theme.of(context).textTheme.headline4,
       ),
     );
   }
