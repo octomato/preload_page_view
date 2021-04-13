@@ -12,8 +12,12 @@
 
 ## [0.1.4]
 
-* Bug fix
+* Stable Version - Bug fix
 
 ## [0.1.5]
 
-* Fix null check operators
+* Beta Version - Fix null check operators
+
+## [0.1.6]
+
+* Beta Version - Bug fix. If you found any issue in this beta version, please try stable version [0.1.4]

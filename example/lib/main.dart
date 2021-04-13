@@ -34,7 +34,8 @@ class _PreloadPageViewState extends State<PreloadPageViewDemo> {
         body: Container(
             child: PreloadPageView.builder(
           preloadPagesCount: 5,
-          itemBuilder: (BuildContext context, int position) => DemoPage(position),
+          itemBuilder: (BuildContext context, int position) =>
+              DemoPage(position),
           controller: PreloadPageController(initialPage: 1),
           onPageChanged: (int position) {
             print('page changed. current: $position');
