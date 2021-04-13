@@ -27,5 +27,5 @@ Also you can use `preloadPagesCount` to set preload pages count when you need.
 
 
 
-If you found any issue in the newest beta version, please try stable version [0.1.4] **Please us a star if you like this widget. Your star could help us update or fix bugs quickly.**
+If you found any issue in the newest beta version, please try stable version [0.1.4]. Please give us a star if you like this widget. **Your star could help us update or fix bugs quickly.**
 
