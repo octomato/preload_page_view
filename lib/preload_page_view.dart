@@ -3,7 +3,6 @@ library preload_page_view;
 import 'dart:async';
 import 'dart:math' as math;
 
-import 'package:flutter/physics.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
@@ -165,6 +164,7 @@ class PageMetrics extends FixedScrollMetrics {
     required double? maxScrollExtent,
     required double? pixels,
     required double? viewportDimension,
+    required double devicePixelRatio,
     required AxisDirection axisDirection,
     required this.viewportFraction,
   }) : super(
@@ -173,6 +173,7 @@ class PageMetrics extends FixedScrollMetrics {
           pixels: pixels,
           viewportDimension: viewportDimension,
           axisDirection: axisDirection,
+          devicePixelRatio: devicePixelRatio,
         );
 
   @override
@@ -183,6 +184,7 @@ class PageMetrics extends FixedScrollMetrics {
     double? viewportDimension,
     AxisDirection? axisDirection,
     double? viewportFraction,
+    double? devicePixelRatio,
   }) {
     return PageMetrics(
       minScrollExtent: minScrollExtent ?? this.minScrollExtent,
@@ -191,6 +193,7 @@ class PageMetrics extends FixedScrollMetrics {
       viewportDimension: viewportDimension ?? this.viewportDimension,
       axisDirection: axisDirection ?? this.axisDirection,
       viewportFraction: viewportFraction ?? this.viewportFraction,
+      devicePixelRatio: devicePixelRatio ?? this.devicePixelRatio,
     );
   }
 
@@ -266,7 +269,7 @@ class _PagePosition extends ScrollPositionWithSingleContext
 
   @override
   void saveScrollOffset() {
-    PageStorage.of(context.storageContext)?.writeState(
+    PageStorage.of(context.storageContext).writeState(
         context.storageContext,
         getPageFromPixels(hasPixels ? pixels : null,
             hasViewportDimension ? viewportDimension : null));
@@ -276,7 +279,7 @@ class _PagePosition extends ScrollPositionWithSingleContext
   void restoreScrollOffset() {
     if (hasPixels == true) {
       final double? value = PageStorage.of(context.storageContext)
-          ?.readState(context.storageContext);
+          .readState(context.storageContext);
       if (value != null) _pageToUseOnStartup = value;
     }
   }
@@ -306,6 +309,7 @@ class _PagePosition extends ScrollPositionWithSingleContext
     double? viewportDimension,
     AxisDirection? axisDirection,
     double? viewportFraction,
+    double? devicePixelRatio,
   }) {
     return PageMetrics(
       minScrollExtent: minScrollExtent ??
@@ -317,6 +321,7 @@ class _PagePosition extends ScrollPositionWithSingleContext
           ((hasViewportDimension) ? this.viewportDimension : null),
       axisDirection: axisDirection ?? this.axisDirection,
       viewportFraction: viewportFraction ?? this.viewportFraction,
+      devicePixelRatio: devicePixelRatio ?? this.devicePixelRatio,
     );
   }
 }
@@ -367,7 +372,15 @@ class PageScrollPhysics extends ScrollPhysics {
     if ((velocity <= 0.0 && position.pixels <= position.minScrollExtent) ||
         (velocity >= 0.0 && position.pixels >= position.maxScrollExtent))
       return super.createBallisticSimulation(position, velocity);
-    final Tolerance tolerance = this.tolerance;
+    final Tolerance tolerance = toleranceFor(FixedScrollMetrics(
+      minScrollExtent: null,
+      maxScrollExtent: null,
+      pixels: null,
+      viewportDimension: null,
+      axisDirection: AxisDirection.down,
+      devicePixelRatio: WidgetsBinding
+          .instance.platformDispatcher.views.first.devicePixelRatio,
+    ));
     final double target =
         _getTargetPixels(position as ScrollPosition, tolerance, velocity);
     if (target != position.pixels)
