@@ -37,6 +37,8 @@
 /packages/flutter/coverage/
 version
 
+# ignore  pubspec.lock as dart suggested: https://dart.dev/tools/pub/glossary#library-package
+pubspec.lock
 # packages file containing multi-root paths
 .packages.generated
 
