@@ -1,6 +1,6 @@
 name: preload_page_view
 description: A pre-load PageView widget which you can use it to preload one page before and after current page.
-version: 0.1.6
+version: 0.2.0
 homepage: https://github.com/Neil-Gu/preload_page_view
 
 environment:

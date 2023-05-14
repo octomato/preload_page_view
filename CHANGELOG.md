@@ -21,3 +21,7 @@
 ## [0.1.6]
 
 * Beta Version - Bug fix. If you found any issue in this beta version, please try stable version [0.1.4]
+
+## [0.2.0]
+
+* Bug fix for Flutter 3.10
