@@ -437,6 +437,7 @@ class PreloadPageView extends StatefulWidget {
     PreloadPageController? controller,
     this.physics,
     this.pageSnapping = true,
+    this.clipBehavior = Clip.hardEdge,
     this.onPageChanged,
     List<Widget> children = const <Widget>[],
     this.preloadPagesCount = 1,
@@ -465,6 +466,7 @@ class PreloadPageView extends StatefulWidget {
     PreloadPageController? controller,
     this.physics,
     this.pageSnapping = true,
+    this.clipBehavior = Clip.hardEdge,
     this.onPageChanged,
     required IndexedWidgetBuilder itemBuilder,
     int? itemCount,
@@ -483,6 +485,7 @@ class PreloadPageView extends StatefulWidget {
     PreloadPageController? controller,
     this.physics,
     this.pageSnapping = true,
+    this.clipBehavior = Clip.hardEdge,
     this.onPageChanged,
     required this.childrenDelegate,
     this.preloadPagesCount = 1,
@@ -541,6 +544,13 @@ class PreloadPageView extends StatefulWidget {
   ///
   /// [preloadPagesCount] value start from 0, default 1
   final int preloadPagesCount;
+
+  /// The content will be clipped (or not) according to this option.
+  ///
+  /// See the enum [Clip] for details of all possible options and their common use cases.
+  ///
+  /// Defaults to [Clip.hardEdge].
+  final Clip clipBehavior;
 
   @override
   _PreloadPageViewState createState() =>
@@ -610,17 +620,10 @@ class _PreloadPageViewState extends State<PreloadPageView> {
         physics: physics,
         viewportBuilder: (BuildContext context, ViewportOffset position) {
           return Viewport(
-            cacheExtent: _preloadPagesCount < 1
-                ? 0
-                : (_preloadPagesCount == 1
-                    ? 1
-                    : widget.scrollDirection == Axis.horizontal
-                        ? MediaQuery.of(context).size.width *
-                                _preloadPagesCount -
-                            1
-                        : MediaQuery.of(context).size.height *
-                                _preloadPagesCount -
-                            1),
+            clipBehavior: widget.clipBehavior,
+            cacheExtent:
+                _preloadPagesCount < 1 ? 0 : _preloadPagesCount.toDouble(),
+            cacheExtentStyle: CacheExtentStyle.viewport,
             axisDirection: axisDirection,
             offset: position,
             slivers: <Widget>[
