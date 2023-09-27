@@ -24,6 +24,7 @@ class PreloadPageController extends ScrollController {
     this.initialPage = 0,
     this.keepPage = true,
     this.viewportFraction = 1.0,
+    this.padEnds = true,
   }) : assert(viewportFraction > 0.0);
 
   /// The page to show when first creating the [PreloadPageView].
@@ -51,6 +52,21 @@ class PreloadPageController extends ScrollController {
   /// Defaults to 1.0, which means each page fills the viewport in the scrolling
   /// direction.
   final double viewportFraction;
+
+  /// Whether to add padding to both ends of the list.
+  ///
+  /// If this is set to true and [viewportFraction] < 1.0, padding will be added
+  /// such that the first and last child slivers will be in the center of
+  /// the viewport when scrolled all the way to the start or end, respectively.
+  /// You may want to set this to false if this [SliverFillViewport] is not the only
+  /// widget along this main axis, such as in a [CustomScrollView] with multiple
+  /// children.
+  ///
+  /// This option cannot be null. If [viewportFraction] >= 1.0, this option has no
+  /// effect. Defaults to true.
+  final bool padEnds;
+
+
 
   /// The current page displayed in the controlled [PreloadPageView].
   ///
@@ -626,6 +642,7 @@ class _PreloadPageViewState extends State<PreloadPageView> {
             slivers: <Widget>[
               SliverFillViewport(
                   viewportFraction: widget.controller.viewportFraction,
+                  padEnds: widget.controller.padEnds,
                   delegate: widget.childrenDelegate),
             ],
           );
